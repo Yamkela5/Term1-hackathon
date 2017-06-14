@@ -53,3 +53,10 @@ font-family: 'Spectral', serif;
 /*font-family: 'Indie Flower', cursive;*/
 
 }
+.addText {
+  margin-top: -300px;
+margin-left: 82%;
+width: 25%;
+border-left: 2px #d4d4d6;
+border-color: #f9989e;
+  }
