@@ -1,54 +1,49 @@
-#searchBtn {
-    background-color: #4CAF50;
-    border: none;
-    color: green;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+.Button {
+  margin-top: 50px;
+  margin-left: 83%;
 }
 
-#addBtn {
-    background-color: #4CAF50;
-    border: none;
-    color: green;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+#searchBtn, #addBtn, #findBtn, #displayBtn {
+  background-color: #d1d104;
+  border-top: 2px inset;
+  border-bottom: 2px inset;
+  border-left: none;
+  border-right: none;
+  margin-bottom: 20px;
+  height: 17%;
+  width: 90%;
+  font-size: 20px;
+  border-color: #0c0c0a;
+  font-weight: bold;
+  color: #0f0f0e;
+  padding: 10px 28px 10px 28px;
 }
 
-#displayBtn {
-    background-color: #4CAF50;
-    border: none;
-    color: green;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+#addBtn:hover {
+  background-color: #0f0f0e;
+  border-color: #fff;
+  color: #d1d104;
 }
 
-#findBtn {
-    background-color: #4CAF50;
-    border: none;
-    color: green;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+#findBtn:hover {
+  background-color: #0f0f0e;
+  border-color: #fff;
+  color: #d1d104;
 }
+
+#searchBtn:hover {
+  background-color: #0f0f0e;
+  border-color: #fff;
+  color: #d1d104;
+}
+
+#displayBtn:hover {
+  background-color: #0f0f0e;
+  border-color: #fff;
+  color: #d1d104;
+}
+
+
 
 body{
 font-family: 'Spectral', serif;
@@ -96,11 +91,11 @@ content: "";
 /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 3% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 40%; /* Could be more or less, depending on screen size */
-    height: 60%;
+    width: 55%; /* Could be more or less, depending on screen size */
+    height: 85%;
 }
 
 /* The Close Button */
@@ -116,4 +111,18 @@ content: "";
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+.details {
+  font-size: 25px;
+}
+
+.addReview {
+  margin-top: 3%;
+  margin-left: 85%;
+  padding: 3px;
+  font-size: 17px;
+  background-color: #d1d104;
+  color: #0f0f0e;
+  font-weight: bold;
 }
