@@ -37,6 +37,7 @@ var searchListElem = document.querySelector('#search');
 var findModal = document.querySelector('#findModal');
 var detailsModal = document.querySelector('#detailsModal');
 var addModal = document.querySelector('#addModal');
+var saveFeed = document.querySelector('.saveFeed');
 
 // Get the button that opens the modal
 var AddBtn = document.querySelector("#addBtn");
@@ -46,24 +47,56 @@ var DisplayBtn = document.querySelector("#displayBtn");
 // Get the <span> element that closes the modal
 var span = document.querySelector(".close")[0];
 
-function addReview(){
+function addReview() {
 
 
-  var nameValue = custName.value;
-  var ageValue = custAge.value;
-  var occValue = custOcc.value;
-  var question1Value = custQuestion1.value;
-  var question2Value = custQuestion2.value;
-  var question3Value = custQuestion3.value;
-  var video = custName.value;
+    var nameValue = custName.value;
+    var ageValue = custAge.value;
+    var occValue = custOcc.value;
+    var question1Value = custQuestion1.value;
+    var question2Value = custQuestion2.value;
+    var question3Value = custQuestion3.value;
+    var video = custName.value;
 
-  if (nameValue !== '' && ageValue !== '' && occValue !== ''
-    && question1Value !== '' && question2Value !== '' && question3Value !== '') {
+// if (nameValue !== '' && ageValue !== '' && occValue !== '' &&
+    //     question1Value !== '' && question2Value !== '' && question3Value !== '') {} else {
+    //
+    //     // alert("Please enter text on missing field(s)");
+    // }
+    var review = {
+      nameValue,
+      ageValue,
+      occValue,
+      question1Value,
+      question2Value,
+      question3Value,
+      }
 
+    storeReview(review);
 
- }
- else {
-  alert("Please enter text on missing field(s)");
+    // if (nameValue !== '' && ageValue !== '' && occValue !== '' &&
+    //     question1Value !== '' && question2Value !== '' && question3Value !== '') {} else {
+    //
+    //     // alert("Please enter text on missing field(s)");
+    // }
+  // reviews
+}
+
+function getStoredReviews(){
+  var reviews = [];
+  var storedReviews = localStorage['reviews'];
+  if (storedReviews !== undefined){
+    reviews = JSON.parse(storedReviews)
+  }
+  return reviews;
+}
+
+function storeReview(review){
+  var reviews = getStoredReviews();
+  reviews.push(review);
+
+  localStorage['reviews'] = JSON.stringify(reviews);
+
 }
 
 // When the user clicks on the button, open the modal
