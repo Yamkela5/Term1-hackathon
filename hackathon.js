@@ -1,6 +1,23 @@
-//Declaring my buttons
+//declaring my textbox classes
+var nameTextBox = document.querySelector('.addName');
+var ageTextBox = document.querySelector('.addAge');
+var occTextBox = document.querySelector('.addOcc');
+var question1TextBox = document.querySelector('.question1');
+var question2TextBox = document.querySelector('.question2');
+var question3TextBox = document.querySelector('.question3');
 
+//declaring my textbox classes
+var custName = document.querySelector('.addName');
+var custAge = document.querySelector('.addAge');
+var custOcc = document.querySelector('.addOcc');
+var custQuestion1 = document.querySelector('.question1');
+var custQuestion2 = document.querySelector('.question2');
+var custQuestion3 = document.querySelector('.question3');
+var video = document.querySelector('#video');
+
+//Declaring my buttons
 var searchBtn = document.querySelector('#searchBtn');
+var addReviewBtn = document.querySelector('.addReview');
 
 //Display data on program load
 var searchTempText = document.querySelector('.searchTemp').innerHTML;
@@ -29,6 +46,25 @@ var DisplayBtn = document.querySelector("#displayBtn");
 // Get the <span> element that closes the modal
 var span = document.querySelector(".close")[0];
 
+function addReview(){
+
+
+  var nameValue = custName.value;
+  var ageValue = custAge.value;
+  var occValue = custOcc.value;
+  var question1Value = custQuestion1.value;
+  var question2Value = custQuestion2.value;
+  var question3Value = custQuestion3.value;
+  var video = custName.value;
+
+  if (nameValue !== '' && ageValue !== '' && occValue !== ''
+    && question1Value !== '' && question2Value !== '' && question3Value !== '') {
+
+
+ }
+ else {
+  alert("Please enter text on missing field(s)");
+}
 
 // When the user clicks on the button, open the modal
 AddBtn.onclick = function() {
@@ -44,3 +80,5 @@ FindBtn.onclick = function() {
 DisplayBtn.onclick = function() {
     detailsModal.style.display = "block";
 }
+
+addReviewBtn.addEventListener('click', addReview);
