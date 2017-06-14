@@ -46,15 +46,10 @@
     margin: 4px 2px;
     cursor: pointer;
 }
-#Btn {
-    background-color: #4CAF50;
-    border: none;
-    color: green;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+
+body{
+font-family: 'Spectral', serif;
+/*font-family: 'Quicksand', sans-serif;*/
+/*font-family: 'Indie Flower', cursive;*/
+
 }
