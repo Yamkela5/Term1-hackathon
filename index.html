@@ -4,17 +4,13 @@
     <link rel="stylesheet" href="hackathon.css">
     <link href="https://fonts.googleapis.com/css?family=Spectral" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/skeleton-framework/1.1.1/skeleton.css"></script>
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/skeleton-framework/1.1.1/skeleton.css"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
     <meta charset="utf-8">
     <title></title>
 
-  </head>
-  <body>
-    <div class="container">
-    <h1>Jumo App</h1>
-
-  <h1>Jumo App</h1>
+</head>
+<body>
 
 <script class="searchTemp" type="text/handlebars-x">
   <div id="searchContainer">
@@ -23,8 +19,8 @@
     <div id="searchInfo">
       <img src="{{video}}"><br>
       <b>FULL NAME:</b> {{name}}<br>
-      <b>AGE:</b> {{color}}<br>
-      <b>OCCUPATION:</b> R{{prices}}.00<br>
+      <b>AGE:</b> {{age}}<br>
+      <b>OCCUPATION:</b> R{{occupation}}.00<br>
       <b>WHAT CHALLENGES DO YOU FACE ON YOUR DAY TO DAY LIFE:</b> {{stock}}<br>
       <b>WHAT STATEMENT BEST DESCRIBES JUMO TO YOU:</b> {{size}}<br>
       <b>IF YOU WERE GIVEN R5000 HOW WOULD YOU SPEND IT:</b> {{size}}<br>
@@ -39,12 +35,12 @@
    {{#each shoeData}}
    <div id="custDetails">
    <div id="custInfo">
-    <b>FULL NAME:</b>{{brand}}<br>
-    <b>AGE:</b> {{name}}<br>
-    <b>OCCUPATION:</b> {{color}}<br>
-    <b>WHAT CHALLENGES DO YOU FACE ON YOUR DAY TO DAY LIFE::</b> {{stock}}<br>
-    <b>WHAT STATEMENT BEST DESCRIBES JUMO TO YOU:</b> {{size}}<br>
-    <b>IF YOU WERE GIVEN R5000 HOW WOULD YOU SPEND IT:</b> {{size}}<br>
+    <b>FULL NAME:</b>{{name}}<br>
+    <b>AGE:</b> {{age}}<br>
+    <b>OCCUPATION:</b> {{occupation}}<br>
+    <b>WHAT CHALLENGES DO YOU FACE ON YOUR DAY TO DAY LIFE::</b> {{question1}}<br>
+    <b>WHAT STATEMENT BEST DESCRIBES JUMO TO YOU:</b> {{question2}}<br>
+    <b>IF YOU WERE GIVEN R5000 HOW WOULD YOU SPEND IT:</b> {{question3}}<br>
     <img src="{{video}}"><br>
    </div>
    </div>
@@ -52,7 +48,10 @@
  </div>
 </script>
 
-<div class="customer">
+<div class="container">
+
+  <h1>Jumo App</h1>
+  <div class="customer">
   <div class="Button">
     <button type="button" name="addBtn" id="addBtn">ADD</button>
     <button type="button" name="findBtn" id="findBtn">FIND</button>
@@ -61,8 +60,8 @@
   </div>
 
 <!-- Find Customers in List Modal content -->
-<div id="findModal" class="findModal">
-  <div class="findModal-content">
+<div id="findModal" class="modal">
+  <div class="modal-content">
     <span class="close">&times;</span>
     <label class="find">Find Customer in In List</label><br>
     <button class="closeFindBtn">Close</button>
@@ -70,18 +69,28 @@
 </div>
 
 <!-- Find Customers in List Modal content -->
-<div id="detailsModal" class="detailsModal">
-  <div class="detailsModal-content">
+<div id="detailsModal" class="modal">
+  <div class="modal-content">
     <span class="close">&times;</span>
     <label class="details">Display Customer Details</label><br>
     <button class="closeDetailsBtn">Close</button>
   </div>
+</div>
 
-<div class= "addText">
-Name:<input type="text" class="addName" placeholder="Type name">
-Age:<input type="text" class="addAge" placeholder="Type age">
-Occupation<input type="text" class="addOcc" placeholder="Type occupation">
-<button type="button" class="uploadVideo">Upload video</button>
+<div id="addModal" class="modal">
+ <div class="modal-content">
+  <span class="close">&times;</span>
+  <label class="details">Display <b>Customer feedback on Perfomance </label><br>
+  <b>Name:<input type="text" class="addName" placeholder="Type name">
+  <b>Age:<input type="text" class="addAge" placeholder="Type age"><br>
+  <b>Occupation<input type="text" class="addOcc" placeholder="Type occupation"><br>
+  <b>What challenges do you face on  your day to day life?<input type="text" class="addName" placeholder="Type name"><br>
+  <b>What statement best describes JUMO to you?<input type="text" class="addName" placeholder="Type name"><br>
+  <b>If you were given R5000, how would you spend it?<input type="text" class="addName" placeholder="Type name"><br>
+  <button type="button" class="uploadVideo">Upload video</button><br>
+</div>
+</div>
+
 </div>
 </div>
 </body>
@@ -98,5 +107,5 @@ Occupation<input type="text" class="addOcc" placeholder="Type occupation">
 
 </div>
   </body>
-  <script src="hackathon.js"></script>
+  <script src="hackathon.js" charset="utf-8">></script>
 </html>
