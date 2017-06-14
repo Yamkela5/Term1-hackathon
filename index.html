@@ -5,20 +5,85 @@
     <link href="https://fonts.googleapis.com/css?family=Spectral" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skeleton-framework/1.1.1/skeleton.css"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
     <meta charset="utf-8">
-    <title>Jumo hackathon</title>
+    <title></title>
 
   </head>
   <body>
-    <h1>Jumo App</h1>
+  <h1>Jumo App</h1>
 
+<script class="searchTemp" type="text/handlebars-x">
+  <div id="searchContainer">
+    {{#each shoeData}}
+    <div id="searchDetails">
+    <div id="searchInfo">
+      <img src="{{video}}"><br>
+      <b>FULL NAME:</b> {{name}}<br>
+      <b>AGE:</b> {{color}}<br>
+      <b>OCCUPATION:</b> R{{prices}}.00<br>
+      <b>WHAT CHALLENGES DO YOU FACE ON YOUR DAY TO DAY LIFE:</b> {{stock}}<br>
+      <b>WHAT STATEMENT BEST DESCRIBES JUMO TO YOU:</b> {{size}}<br>
+      <b>IF YOU WERE GIVEN R5000 HOW WOULD YOU SPEND IT:</b> {{size}}<br>
+    </div>
+    </div>
+    {{/each}}
+  </div>
+</script>
+
+<script class="customerTemp" type="text/handlebars-x">
+  <div id="custContainer">
+   {{#each shoeData}}
+   <div id="custDetails">
+   <div id="custInfo">
+    <b>FULL NAME:</b>{{brand}}<br>
+    <b>AGE:</b> {{name}}<br>
+    <b>OCCUPATION:</b> {{color}}<br>
+    <b>WHAT CHALLENGES DO YOU FACE ON YOUR DAY TO DAY LIFE::</b> {{stock}}<br>
+    <b>WHAT STATEMENT BEST DESCRIBES JUMO TO YOU:</b> {{size}}<br>
+    <b>IF YOU WERE GIVEN R5000 HOW WOULD YOU SPEND IT:</b> {{size}}<br>
+    <img src="{{video}}"><br>
+   </div>
+   </div>
+   {{/each}}
+ </div>
+</script>
+
+<div class="customer">
   <div class="Button">
     <button type="button" name="addBtn" id="addBtn">ADD</button>
     <button type="button" name="findBtn" id="findBtn">FIND</button>
     <button type="button" name="searchBtn" id="searchBtn">SEARCH</button>
     <button type="button" name="displayBtn" id="displayBtn">DISPLAY</button>
-
   </div>
+
+<!-- Find Customers in List Modal content -->
+<div id="findModal" class="findModal">
+  <div class="findModal-content">
+    <span class="close">&times;</span>
+    <label class="find">Find Customer in In List</label><br>
+    <button class="closeFindBtn">Close</button>
+  </div>
+</div>
+
+<!-- Find Customers in List Modal content -->
+<div id="detailsModal" class="detailsModal">
+  <div class="detailsModal-content">
+    <span class="close">&times;</span>
+    <label class="details">Display Customer Details</label><br>
+    <button class="closeDetailsBtn">Close</button>
+  </div>
+</div>
+
+  <div id="add"></div>
+
+  <div id="display"></div>
+
+  <div id="find"></div>
+
+  <div id="search"></div>
+
+</div>
   </body>
   <script src="hackathon.js"></script>
 </html>
