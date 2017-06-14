@@ -53,10 +53,25 @@ font-family: 'Spectral', serif;
 /*font-family: 'Indie Flower', cursive;*/
 
 }
+<<<<<<< HEAD
 .addText {
   margin-top: -300px;
 margin-left: 82%;
 width: 25%;
 border-left: 2px #d4d4d6;
 border-color: #f9989e;
-  }
+}
+
+.customer {
+background-image: url('background.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+opacity: 0.7;
+z-index: -1;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+position: absolute;
+content: "";
+}
