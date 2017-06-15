@@ -133,7 +133,6 @@ DisplayBtn.onclick = function() {
 
     detailsModal.innerHTML = custDataHtml;
 }
-var span = document.querySelector(".close");
 
 span.onclick = function() {
   addModal.style.display = "none";
@@ -145,9 +144,9 @@ window.onclick = function(event) {
   if (event.target == addModal) {
       addModal.style.display = "none";
   }
-   if (event.target == findModal) {
-      findModal.style.display = "none";
-  }
+  //  if (event.target == findModal) {
+  //     findModal.style.display = "none";
+  // }
   // if (event.target == detailsModal) {
   //     detailsModal.style.display = "none";
   // }
@@ -158,5 +157,5 @@ var closeFindButton = function(){
  findModal.close();
 }
 
-closeFind.addEventListener('click', closeFindButton);
+//closeFind.addEventListener('click', closeFindButton);
 addReviewBtn.addEventListener('click', addReview);
