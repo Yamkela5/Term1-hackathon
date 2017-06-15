@@ -128,9 +128,9 @@ content: "";
     margin: 3% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    margin-top: 80px;
+    margin-top: 120px;
     width: 55%; /* Could be more or less, depending on screen size */
-    height: 75%;
+    height: 73%;
 }
 
 /* The Close Button */
@@ -153,11 +153,10 @@ content: "";
 }
 
 .addReview {
-  margin-top: 3%;
+  margin-top: -5%;
   margin-left: 85%;
-  padding: 3px;
-  font-size: 17px;
+  padding: 1px;
+  font-size: 15px;
   background-color: #d1d104;
   color: #0f0f0e;
-  font-weight: bold;
 }
