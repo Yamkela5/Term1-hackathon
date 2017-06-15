@@ -32,9 +32,12 @@ var addListElem = document.querySelector('#add');
 var displayListElem = document.querySelector('#display');
 var findListElem = document.querySelector('#find');
 var searchListElem = document.querySelector('#search');
+var searchButton = document.querySelector('#searchBtn')
 
 //elements for the modal box
 var findModal = document.querySelector('#findModal');
+var findModalData = document.querySelector('.data');
+
 var detailsModal = document.querySelector('#detailsModal');
 var addModal = document.querySelector('#addModal');
 var saveFeed = document.querySelector('.saveFeed');
@@ -45,6 +48,14 @@ var FindBtn = document.querySelector("#findBtn");
 var DisplayBtn = document.querySelector("#displayBtn");
 
 // Get the <span> element that closes the modal
+searchButton.addEventListener('click', function(){
+
+
+//  alert('it is working');
+})
+
+
+
 var span = document.querySelector(".close")[0];
 
 function addReview() {
@@ -106,7 +117,13 @@ AddBtn.onclick = function() {
 
 // When the user clicks on the button, open the modal
 FindBtn.onclick = function() {
-    findModal.style.display = "block";
+  findModal.style.display = "block";
+
+  console.log(getStoredReviews());
+
+  var custDataHtml = customerTemplate({custData : getStoredReviews()})
+
+  findModalData.innerHTML = custDataHtml;
 }
 
 // When the user clicks on the button, open the modal
