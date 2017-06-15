@@ -46,7 +46,6 @@ var saveFeed = document.querySelector('.saveFeed');
 // Get the button that opens the modal
 var AddBtn = document.querySelector("#addBtn");
 var FindBtn = document.querySelector("#findBtn");
-var DisplayBtn = document.querySelector("#searchBtn");
 
 //Declaring the modal close button
 closeFind = document.querySelector('.closeFindBtn');
@@ -123,16 +122,17 @@ FindBtn.onclick = function() {
 
 }
 
-// When the user clicks on the button, open the modal
-DisplayBtn.onclick = function() {
-    findModal.style.display = "block";
-
-    console.log(getStoredReviews());
-
-    var custDataHtml = customerTemplate({custData : getStoredReviews()})
-
-    detailsModal.innerHTML = custDataHtml;
-}
+// var DisplayBtn = document.querySelector("#searchBtn");
+// // When the user clicks on the button, open the modal
+// DisplayBtn.onclick = function() {
+//     findModal.style.display = "block";
+//
+//     console.log(getStoredReviews());
+//
+//     var custDataHtml = customerTemplate({custData : getStoredReviews()})
+//
+//     detailsModal.innerHTML = custDataHtml;
+// }
 
 span.onclick = function() {
   addModal.style.display = "none";
