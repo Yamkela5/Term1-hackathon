@@ -1,5 +1,5 @@
 .Button {
-  margin-top: 50px;
+  margin-top: 100px;
   margin-left: 83%;
 }
 
@@ -43,6 +43,40 @@
   color: #d1d104;
 }
 
+#custDetails {
+  margin-left: 15%;
+  margin-top: 2%;
+}
+
+#custInfo {
+  float: left;
+  margin-left: 3px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-style: inset;
+  background-color: #fff;
+  color: #110900;
+  border-color: #f9989e;
+}
+
+#custContainer {
+    margin-top: 5px;
+    overflow-y: scroll;
+    width: 82%;
+    height: 300px;
+}
+
+h1 {
+  margin-top: 5px;
+  font-size: 60px;
+  color: #0f0f0e;
+  margin-left: 35%;
+  font-style: italic;
+  font-weight: bold;
+  box-shadow: #d1d104;
+  margin-bottom: 25px;
+  text-shadow: 0px 3px 5px rgba(244, 203, 66, .95);
+}
 
 
 body{
@@ -94,8 +128,9 @@ content: "";
     margin: 3% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
+    margin-top: 80px;
     width: 55%; /* Could be more or less, depending on screen size */
-    height: 85%;
+    height: 75%;
 }
 
 /* The Close Button */

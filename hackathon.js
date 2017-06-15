@@ -6,6 +6,7 @@ var question1TextBox = document.querySelector('.question1');
 var question2TextBox = document.querySelector('.question2');
 var question3TextBox = document.querySelector('.question3');
 
+
 //declaring my textbox classes
 var custName = document.querySelector('.addName');
 var custAge = document.querySelector('.addAge');
@@ -45,7 +46,7 @@ var saveFeed = document.querySelector('.saveFeed');
 // Get the button that opens the modal
 var AddBtn = document.querySelector("#addBtn");
 var FindBtn = document.querySelector("#findBtn");
-var DisplayBtn = document.querySelector("#displayBtn");
+var DisplayBtn = document.querySelector("#searchBtn");
 
 // Get the <span> element that closes the modal
 searchButton.addEventListener('click', function(){
@@ -129,6 +130,23 @@ FindBtn.onclick = function() {
 // When the user clicks on the button, open the modal
 DisplayBtn.onclick = function() {
     detailsModal.style.display = "block";
+}
+
+span.onclick = function() {
+  addModal.style.display = "none";
+  findModal.style.display = "none";
+  detailsModal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == addModal) {
+      findModal.style.display = "none";
+  }
+  console.log(getStoredReviews());
+
+  var custDataHtml = customerTemplate({custData : getStoredReviews()})
+
+  findModalData.innerHTML = custDataHtml;
 }
 
 addReviewBtn.addEventListener('click', addReview);
