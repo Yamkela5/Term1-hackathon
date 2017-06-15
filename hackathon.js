@@ -48,16 +48,11 @@ var AddBtn = document.querySelector("#addBtn");
 var FindBtn = document.querySelector("#findBtn");
 var DisplayBtn = document.querySelector("#searchBtn");
 
-// Get the <span> element that closes the modal
-searchButton.addEventListener('click', function(){
+//Declaring the modal close button
+closeFind = document.querySelector('.closeFindBtn');
+closeDetail = document.querySelector('.closeDetailsBtn');
 
-
-//  alert('it is working');
-})
-
-
-
-var span = document.querySelector(".close")[0];
+var span = document.querySelector(".close");
 
 function addReview() {
 
@@ -125,12 +120,20 @@ FindBtn.onclick = function() {
   var custDataHtml = customerTemplate({custData : getStoredReviews()})
 
   findModalData.innerHTML = custDataHtml;
+
 }
 
 // When the user clicks on the button, open the modal
 DisplayBtn.onclick = function() {
-    detailsModal.style.display = "block";
+    findModal.style.display = "block";
+
+    console.log(getStoredReviews());
+
+    var custDataHtml = customerTemplate({custData : getStoredReviews()})
+
+    detailsModal.innerHTML = custDataHtml;
 }
+var span = document.querySelector(".close");
 
 span.onclick = function() {
   addModal.style.display = "none";
@@ -140,13 +143,20 @@ span.onclick = function() {
 
 window.onclick = function(event) {
   if (event.target == addModal) {
+      addModal.style.display = "none";
+  }
+   if (event.target == findModal) {
       findModal.style.display = "none";
   }
-  console.log(getStoredReviews());
-
-  var custDataHtml = customerTemplate({custData : getStoredReviews()})
-
-  findModalData.innerHTML = custDataHtml;
+  // if (event.target == detailsModal) {
+  //     detailsModal.style.display = "none";
+  // }
 }
 
+
+var closeFindButton = function(){
+ findModal.close();
+}
+
+closeFind.addEventListener('click', closeFindButton);
 addReviewBtn.addEventListener('click', addReview);
